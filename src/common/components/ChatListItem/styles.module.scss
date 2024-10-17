@@ -1,0 +1,94 @@
+.container {
+  flex: 1;
+  overflow-y: scroll;
+
+  /* Custom Scrollbar */
+  &::-webkit-scrollbar {
+    width: 12px; /* Đặt chiều rộng của thanh cuộn */
+    transition: opacity 0.3s; /* Chuyển đổi mượt mà */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(17, 25, 40, 0.5); /* Màu nền của track */
+    border-radius: 10px; /* Bo tròn góc */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888; /* Màu nền của thumb */
+    border-radius: 10px; /* Bo tròn góc */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu nền của thumb khi hover */
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    .icon {
+      width: 20px;
+      height: 20px;
+      background-color: rgba(17, 25, 40, 0.5);
+      padding: 10px;
+      border: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+      &:active {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+    }
+    .searchBar {
+      display: flex;
+      flex: 1;
+      background-color: rgba(17, 25, 40, 0.5);
+      align-items: center;
+      gap: 20px;
+      border-radius: 10px;
+      padding: 10px;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        flex: 1;
+      }
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd35;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+    .image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .name {
+        font-weight: 500;
+      }
+      .message {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}
